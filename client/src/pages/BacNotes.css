@@ -1,0 +1,19 @@
+.bacnotes-page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.bac-info-card { padding: 0; overflow: hidden; }
+.bac-info-body {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+  padding: 1.25rem;
+}
+.bac-stat { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; min-width: 100px; }
+.bac-stat-label { font-size: 0.75rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.bac-stat-value { font-size: 1.5rem; font-weight: 800; }
+
+.section-heading {
+  font-size: 0.8125rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--primary);
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--primary-light);
+}

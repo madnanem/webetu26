@@ -1,0 +1,169 @@
+.bilans-page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* ── Year pill tabs ── */
+.year-pills {
+  display: flex; gap: 0.5rem;
+  overflow-x: auto; padding-bottom: 0.25rem;
+}
+.year-pills::-webkit-scrollbar { height: 4px; }
+.year-pills::-webkit-scrollbar-track { background: transparent; }
+.year-pills::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.year-pill {
+  flex-shrink: 0;
+  padding: 0.5rem 1.125rem; border-radius: 999px;
+  font-size: 0.875rem; font-weight: 600;
+  border: 2px solid var(--border);
+  background: var(--white); color: var(--text-secondary);
+  transition: all 0.18s; white-space: nowrap; line-height: 1;
+}
+.year-pill:hover { border-color: var(--primary); color: var(--primary); }
+.year-pill.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ── Academic Decision Card (mirrors mobile AcademicDecisionCard) ── */
+.decision-card {
+  padding: 1rem 1.25rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.decision-card-label {
+  font-size: 0.9375rem; font-weight: 700; margin: 0;
+}
+.decision-card-label.dc-pass { color: var(--primary); }
+.decision-card-label.dc-fail { color: var(--danger); }
+
+.decision-pills { display: flex; align-items: center; gap: 0.625rem; flex-wrap: wrap; }
+
+.dc-pill {
+  display: inline-flex; align-items: center;
+  padding: 0.3rem 0.875rem; border-radius: 999px;
+  font-size: 0.875rem; font-weight: 600;
+}
+/* Average pill: filled background colored by pass/fail */
+.dc-pill-avg.dc-pill-pass { background: var(--primary); color: #fff; }
+.dc-pill-avg.dc-pill-fail { background: var(--danger); color: #fff; }
+/* Credits pill: neutral tertiary surface */
+.dc-pill-credits {
+  background: var(--primary-light); color: var(--primary);
+}
+
+/* ── Two-column grid ── */
+.bilans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* ── Bilan card ── */
+.bilan-card { padding: 0; overflow: hidden; }
+
+.bilan-card-header {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--primary);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.bilan-card-header.header-fail { background: var(--danger); }
+[dir="rtl"] .bilan-card-header { flex-direction: row-reverse; }
+
+.bilan-card-header-left { display: flex; flex-direction: column; }
+.sem-label { font-size: 1rem; font-weight: 700; color: #fff; }
+.level-label { font-size: 0.75rem; color: rgba(255,255,255,0.75); margin-top: 0.2rem; }
+
+.bilan-badges { display: flex; gap: 0.75rem; flex-shrink: 0; }
+.bilan-badge { display: flex; flex-direction: column; align-items: flex-end; }
+[dir="rtl"] .bilan-badge { align-items: flex-start; }
+.badge-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.04em; color: rgba(255,255,255,0.65); }
+.badge-value { font-size: 1.125rem; font-weight: 800; color: #fff; }
+
+/* ── UE blocks ── */
+.bilan-body { display: flex; flex-direction: column; }
+
+.ue-block { border-bottom: 1px solid var(--border); }
+.ue-block:last-of-type { border-bottom: none; }
+
+.ue-header {
+  display: flex; align-items: center; gap: 0.625rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg); flex-wrap: wrap;
+}
+[dir="rtl"] .ue-header { flex-direction: row-reverse; }
+
+.ue-type {
+  font-size: 0.7rem; font-weight: 700;
+  background: var(--primary-light); color: var(--primary);
+  padding: 0.2rem 0.45rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+}
+.ue-code { font-weight: 600; font-size: 0.8125rem; flex: 1; min-width: 0; }
+.ue-summary { display: flex; align-items: center; gap: 0.625rem; margin-left: auto; flex-shrink: 0; }
+[dir="rtl"] .ue-summary { margin-left: 0; margin-right: auto; }
+.ue-moyenne { font-size: 0.9375rem; font-weight: 700; }
+.ue-credits { font-size: 0.75rem; color: var(--text-secondary); }
+
+.mc-name { font-weight: 500; font-size: 0.875rem; }
+.mc-name-ar { font-size: 0.8125rem; color: var(--text-secondary); direction: rtl; margin-top: 0.125rem; }
+
+.grade-pill {
+  display: inline-block; font-weight: 700; font-size: 0.8125rem;
+  padding: 0.15rem 0.4rem; border-radius: 5px;
+}
+.grade-pass.grade-pill { background: var(--secondary-light); }
+.grade-fail.grade-pill { background: var(--danger-light); }
+.grade-mid.grade-pill  { background: var(--warning-light); }
+.grade-na { color: var(--text-secondary); }
+
+/* ── Footer summary ── */
+.bilan-footer {
+  display: flex; justify-content: flex-end; gap: 1.5rem;
+  padding: 0.875rem 1.25rem;
+  background: var(--primary-light);
+  flex-wrap: wrap;
+}
+[dir="rtl"] .bilan-footer { justify-content: flex-start; }
+.bilan-footer-item { display: flex; flex-direction: column; align-items: flex-end; gap: 0.125rem; }
+[dir="rtl"] .bilan-footer-item { align-items: flex-start; }
+.bilan-footer-item span:first-child { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.bilan-footer-value { font-size: 1rem; font-weight: 700; }
+
+/* ── Decision / Mention badges ── */
+.decision-badge {
+  display: inline-flex; align-items: center;
+  padding: 0.25rem 0.625rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 700;
+  background: rgba(255,255,255,0.15); color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  white-space: nowrap;
+}
+.decision-pass { background: rgba(52,211,153,0.25); border-color: rgba(52,211,153,0.5); }
+.decision-fail { background: rgba(248,113,113,0.25); border-color: rgba(248,113,113,0.5); }
+.decision-dette { background: rgba(251,191,36,0.25); border-color: rgba(251,191,36,0.5); color: #fef3c7; }
+
+.mention-badge {
+  display: inline-flex; align-items: center;
+  padding: 0.2rem 0.5rem; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 600;
+  background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.2);
+  white-space: nowrap;
+}
+
+.dette-warning {
+  display: flex; align-items: center; gap: 0.375rem;
+  color: #f59e0b; font-size: 0.8125rem; font-weight: 600;
+  padding: 0.375rem 0.75rem; border-radius: 6px;
+  background: rgba(245,158,11,0.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .bilans-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .bilan-card-header { flex-direction: column; gap: 0.5rem; }
+  .bilan-badges { justify-content: flex-start; }
+  .bilan-footer { justify-content: flex-start; gap: 1rem; }
+  .ue-header { gap: 0.375rem; }
+  .ue-summary { margin-left: 0; }
+  .decision-pills { flex-direction: column; align-items: flex-start; }
+}
