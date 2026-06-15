@@ -2,21 +2,21 @@
 
 /* ── Hero card ── */
 .profile-hero {
-  display: flex; align-items: center; gap: 1.5rem;
+  display: flex; align-items: center; gap: 1.1rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--teal-800) 100%);
   border: none; border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.3rem;
   box-shadow: 0 4px 16px rgba(0,150,136,0.35);
 }
 [dir="rtl"] .profile-hero { flex-direction: row-reverse; }
 
 .profile-avatar-lg {
-  width: 80px; height: 80px;
+  width: 65px; height: 65px;
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.35);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.75rem; font-weight: 800; color: #fff;
+  font-size: 1.4rem; font-weight: 800; color: #fff;
   flex-shrink: 0; overflow: hidden;
 }
 .profile-photo {
@@ -24,19 +24,19 @@
   object-fit: cover; border-radius: 50%;
 }
 
-.profile-hero-info h2 { font-size: 1.25rem; font-weight: 700; color: #fff; }
-.arabic-name { font-size: 1rem; color: rgba(255,255,255,0.8); direction: rtl; margin-top: 0.25rem; }
+.profile-hero-info h2 { font-size: 1.05rem; font-weight: 700; color: #fff; }
+.arabic-name { font-size: 0.85rem; color: rgba(255,255,255,0.8); direction: rtl; margin-top: 0.15rem; }
 [dir="rtl"] .arabic-name { direction: ltr; }
-.profile-id { font-size: 0.8125rem; color: rgba(255,255,255,0.65); margin-top: 0.375rem; font-family: monospace; }
+.profile-id { font-size: 0.7rem; color: rgba(255,255,255,0.65); margin-top: 0.25rem; font-family: monospace; }
 
 /* ── Info sections ── */
 .profile-section { padding: 0; overflow: hidden; }
 
 .section-heading {
-  font-size: 0.8125rem; font-weight: 700;
+  font-size: 0.7rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--primary);
-  padding: 0.875rem 1.25rem;
+  padding: 0.65rem 0.9rem;
   border-bottom: 1px solid var(--border);
   background: var(--primary-light);
 }
@@ -44,13 +44,13 @@
 .section-body { display: flex; flex-direction: column; }
 
 .info-row {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-  padding: 0.875rem 1.25rem;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
   border-bottom: 1px solid var(--border);
 }
 .info-row:last-child { border-bottom: none; }
-.info-label { font-size: 0.8125rem; color: var(--text-secondary); font-weight: 500; flex-shrink: 0; }
-.info-value { font-size: 0.9375rem; font-weight: 600; text-align: right; }
+.info-label { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500; flex-shrink: 0; }
+.info-value { font-size: 0.8rem; font-weight: 600; text-align: right; }
 [dir="rtl"] .info-value { text-align: left; }
 .info-value.arabic { direction: rtl; font-size: 1rem; }
 [dir="rtl"] .info-value.arabic { direction: ltr; text-align: left; }

@@ -1,6 +1,6 @@
-.inscriptions-page { display: flex; flex-direction: column; gap: 1.5rem; }
+.inscriptions-page { display: flex; flex-direction: column; gap: 1rem; }
 
-.ins-cards { display: flex; flex-direction: column; gap: 1rem; }
+.ins-cards { display: flex; flex-direction: column; gap: 0.75rem; }
 
 .ins-card {
   background: var(--white);
@@ -12,33 +12,33 @@
 }
 
 .ins-card-header {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1rem 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
   background: var(--primary);
 }
 [dir="rtl"] .ins-card-header { flex-direction: row-reverse; }
 
 .ins-card-icon {
-  width: 38px; height: 38px; flex-shrink: 0;
+  width: 32px; height: 32px; flex-shrink: 0;
   background: rgba(255,255,255,0.2); border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   color: #fff;
 }
 
-.ins-card-year { font-size: 1rem; font-weight: 700; color: #fff; }
-.ins-card-level { font-size: 0.8125rem; color: rgba(255,255,255,0.8); margin-top: 0.125rem; }
+.ins-card-year { font-size: 0.85rem; font-weight: 700; color: #fff; }
+.ins-card-level { font-size: 0.7rem; color: rgba(255,255,255,0.8); margin-top: 0.08rem; }
 
 .ins-card-body { display: flex; flex-direction: column; }
 
 .ins-row {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-  padding: 0.75rem 1.25rem;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem;
+  padding: 0.55rem 0.9rem;
   border-bottom: 1px solid var(--border);
 }
 .ins-row:last-child { border-bottom: none; }
-.ins-label { font-size: 0.8125rem; color: var(--text-secondary); font-weight: 500; flex-shrink: 0; }
-.ins-value { font-size: 0.875rem; font-weight: 600; text-align: right; }
+.ins-label { font-size: 0.7rem; color: var(--text-secondary); font-weight: 500; flex-shrink: 0; }
+.ins-value { font-size: 0.75rem; font-weight: 600; text-align: right; }
 [dir="rtl"] .ins-value { text-align: left; }
-.ins-value.mono { font-family: monospace; font-size: 0.8125rem; }
+.ins-value.mono { font-family: monospace; font-size: 0.7rem; }
 .ins-value.arabic { direction: rtl; }
 [dir="rtl"] .ins-value.arabic { direction: ltr; }

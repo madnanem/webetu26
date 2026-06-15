@@ -1,9 +1,9 @@
-.examgrades-page { display: flex; flex-direction: column; gap: 1.5rem; }
+.examgrades-page { display: flex; flex-direction: column; gap: 1rem; }
 
 .eg-semesters-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 0.9rem;
   align-items: start;
 }
 
@@ -20,11 +20,11 @@
 .eg-period-card { padding: 0; overflow: hidden; }
 
 .eg-period-header {
-  padding: 0.875rem 1.25rem;
+  padding: 0.65rem 0.9rem;
   background: var(--primary);
   color: #fff;
   font-weight: 700;
-  font-size: 0.9375rem;
+  font-size: 0.8rem;
 }
 
 /* ── Tab switcher ── */
@@ -35,8 +35,8 @@
 
 .eg-tab {
   flex: 1;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem; font-weight: 600;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.75rem; font-weight: 600;
   border: none; background: var(--white); color: var(--text-secondary);
   cursor: pointer; transition: background 0.15s, color 0.15s;
   border-bottom: 2px solid transparent;
@@ -50,13 +50,13 @@
 
 /* ── Single-session label (when only one type exists) ── */
 .eg-single-label {
-  padding: 0.625rem 1.25rem;
+  padding: 0.45rem 0.9rem;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
 .eg-session-type-badge {
-  font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.65rem;
+  font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.5rem;
   border-radius: 999px; white-space: nowrap;
 }
 .eg-badge-regular { background: var(--secondary); color: #fff; }
@@ -64,22 +64,22 @@
 
 /* ── Grade table ── */
 .ue-chip {
-  font-size: 0.75rem; font-weight: 600;
+  font-size: 0.65rem; font-weight: 600;
   background: var(--primary-light); color: var(--primary);
-  padding: 0.15rem 0.5rem; border-radius: 4px;
+  padding: 0.12rem 0.4rem; border-radius: 4px;
 }
 
 .grade-pill {
-  display: inline-block; font-weight: 700; font-size: 0.8125rem;
-  padding: 0.2rem 0.5rem; border-radius: 5px;
+  display: inline-block; font-weight: 700; font-size: 0.7rem;
+  padding: 0.15rem 0.4rem; border-radius: 5px;
 }
 .grade-pass.grade-pill { background: var(--secondary-light); color: #065f46; }
 .grade-fail.grade-pill { background: var(--danger-light); color: #991b1b; }
 
-.appeal-info { display: flex; align-items: center; gap: 0.375rem; flex-wrap: wrap; }
+.appeal-info { display: flex; align-items: center; gap: 0.25rem; flex-wrap: wrap; }
 .appeal-badge {
-  font-size: 0.7rem; font-weight: 700; color: #b45309;
-  background: rgba(245,158,11,0.15); padding: 0.1rem 0.35rem; border-radius: 4px;
+  font-size: 0.6rem; font-weight: 700; color: #b45309;
+  background: rgba(245,158,11,0.15); padding: 0.08rem 0.25rem; border-radius: 4px;
 }
-.appeal-dates { font-size: 0.75rem; color: var(--text-secondary); }
+.appeal-dates { font-size: 0.65rem; color: var(--text-secondary); }
 .text-muted { color: var(--text-secondary); }

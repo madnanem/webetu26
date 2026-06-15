@@ -82,13 +82,13 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border);
-  padding: 1.25rem;
+  padding: 0.9rem;
   transition: background 0.25s, border-color 0.25s;
 }
 
 /* ── Spinner ── */
 .spinner {
-  width: 36px; height: 36px;
+  width: 28px; height: 28px;
   border: 3px solid var(--border);
   border-top-color: var(--primary);
   border-radius: 50%;
