@@ -3,8 +3,8 @@ services:
     name: webetu
     runtime: node
     rootDir: .
-    buildCommand: npm run build
-    startCommand: npm start
+    buildCommand: npm install --prefix server && npm install --prefix client && npm run build --prefix client
+    startCommand: npm start --prefix server
     envVars:
       - key: NODE_ENV
         value: production

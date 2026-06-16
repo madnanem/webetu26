@@ -10,6 +10,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const isProd = process.env.NODE_ENV === 'production';
 
+console.log(`[SERVER] Starting WebEtu server...`);
+console.log(`[SERVER] Environment: ${isProd ? 'PRODUCTION' : 'DEVELOPMENT'}`);
+console.log(`[SERVER] PORT: ${PORT}`);
+
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({
   origin: isProd ? true : 'http://localhost:3000',
@@ -37,4 +41,4 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || 'Server error' });
 });
 
-app.listen(PORT, () => console.log(`WebEtu server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`[SERVER] ✓ WebEtu server running on port ${PORT}`));
