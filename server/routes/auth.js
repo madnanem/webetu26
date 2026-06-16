@@ -15,8 +15,10 @@ router.post('/login', async (req, res) => {
       { username, password },
       { headers: { 'Content-Type': 'application/json' } }
     );
+    console.log('API Response:', response.data);
     res.json(response.data);
   } catch (err) {
+    console.error('Login error:', err.response?.status, err.response?.data);
     const status = err.response?.status || 500;
     const message = status === 401 ? 'Invalid credentials' : 'Authentication failed';
     res.status(status).json({ error: message });
