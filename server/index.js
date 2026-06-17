@@ -16,7 +16,7 @@ console.log(`[SERVER] PORT: ${PORT}`);
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({
-  origin: isProd ? true : 'http://localhost:3000',
+  origin: isProd ? (origin, callback) => callback(null, true) : 'http://localhost:3000',
   credentials: true,
 }));
 app.use(express.json());
